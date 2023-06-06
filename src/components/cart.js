@@ -24,7 +24,7 @@ const Cart = ({ cartItems, removeFromCart, resetCart}) => {
                 </Link>
             </div>
             <div>
-                <h2>Cart Details</h2>
+                <h2>Madhur Details</h2>
             </div>
             {cartItems.length!=0 ? cartItems.length : 'Cart Empty'}
             <div>
