@@ -61,6 +61,7 @@ function App() {
    <>
     <BrowserRouter>
     <AuthProvider>
+    <Provider store = {store}>
       <div>
         <Link to = '/'>
           <h1>Capgemini.com</h1>
@@ -80,6 +81,7 @@ function App() {
         <Route path = 'editdelete' element = {<RequireAuth><Edit /></RequireAuth>} />
         <Route path = 'update' element = {<RequireAuth><Update /></RequireAuth>} />
       </Routes>
+    </Provider>
     </AuthProvider>
     </BrowserRouter>
     </>
