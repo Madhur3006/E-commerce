@@ -10,7 +10,7 @@ const Cart = ({ cartItems, removeFromCart, resetCart}) => {
         navigate('/orderconfirm', {replace: true})
     }
 
-    const [totalValue, setTotalValue] = useState(0)
+    const totalValue = cartItems.reduce((acc, value) => acc+=value.price, 0)
 
     
      
@@ -58,7 +58,7 @@ const Cart = ({ cartItems, removeFromCart, resetCart}) => {
                     </tbody>
                 </table>
                 <h6>totalAmount {cartItems ? `$${totalValue}` : 0}</h6> 
-                <button isdisabled = {cartItems ? true : false} onClick = {() => handleOnConfirm}>confirm Order</button> 
+                <button disabled = {cartItems ? false : true} onClick = {() => handleOnConfirm()}>confirm Order</button> 
             </div>
             
         </>

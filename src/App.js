@@ -16,7 +16,7 @@ import Edit from './components/editproductdetails'
 import Update from './components/edit'
 import './App.css'
 import store from './redux/store'
-import { provider } from 'react-redux'
+import { Provider } from 'react-redux'
 
 // import Component1 from './components/component1'
 // import Component2 from './components/component2'
